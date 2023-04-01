@@ -1,16 +1,9 @@
-add
-
-1. 영어 명언 개수는 20가지로 늘리고, 한국어 번역 버전도 추가할 것.
-
-quote: "I never dreamed about success, I worked for it",
-quoteKR: "난발광개전딴지오래고어쩌구",
-author: "Estee Lauder",
-
-이런식으로.
-
-2. 이번에도 치이카와 테마를 잡고 갈까 생각중
-
-3. Todo 입력할 때, input에 마우스 커서를 가져다 대면, 엔터 키를 누르면 할 일이 추가됩니다 
+1. Todo 입력할 때, input에 마우스 커서를 가져다 대면, 엔터 키를 누르면 할 일이 추가됩니다 
 라고 팁을 띄워줌
 
-4. windows를 베이스로, 독자적인 디자인을 해보고 싶다
+2. windows를 베이스로 디자인
+
+3. 바탕화면에 표시할 아이콘은 4개. (내 컴퓨터, nomad-coder 바로가기,
+To-Do list, VSCode icon)
+
+4. 작업 표시줄은 지금 작업표시줄을 참고
