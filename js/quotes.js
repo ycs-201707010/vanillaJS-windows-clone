@@ -1,50 +1,58 @@
 const quotes = [
   {
-    quote: "I never dreamed about success, I worked for it",
-    author: "Estee Lauder",
-  },
-  {
-    quote: "Do not try to be original, just try to be good.",
-    author: "Paul Rand",
-  },
-  {
-    quote: "Do not be afraid to give up the good to go for the great",
-    author: "John D. Rockefeller",
-  },
-  {
+    /** 성공으로 가는 길과 실패로 가는 길은 거의 같다. */
     quote:
-      "If you cannot fly then run. If you cannot run, then walk. And if you cannot walk, then crawl, but whatever you do, you have to keep moving forward.",
-    author: "Martin Luther King Jr.",
+      "The road to success and the road to failure are almost exactly the same.",
+    author: "Colin R. Davis",
   },
   {
-    quote:
-      "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.",
-    author: "Thomas Edison",
+    /** 모든 성과는 요령을 피우지 않을 때 생긴다. */
+    quote: "All progress takes place outside the comfort zone.",
+    author: "Michael John Bobak",
   },
   {
+    /** 성공은 주로 성공을 찾느라 바쁜 사람들에게 찾아온다. */
     quote:
-      "The fastest way to change yourself is to hang out with people who are already the way you want to be",
-    author: "REid Hoffman",
+      "Success usually comes to those who are too busy to be looking for it.",
+    author: "Henry David Thoreau",
   },
   {
-    quote:
-      "Money is like gasoline during a road trip. You do not want to run out of gas on your trip, but you are not doing a tour of gas stations",
-    author: "Tim O Reilly",
+    /** 무언가를 시작하려면 말은 멈추고 행동해야 한다. */
+    quote: "The way to get started is to quit talking and begin doing.",
+    author: "Walt Disney",
   },
   {
-    quote:
-      "Some people dream of success, while other people get up every morning and make it happen",
-    author: "Wayne Huizenga",
+    /** 성공하기 위해서, 우리는 먼저 우리 자신이 할 수 있다는 것을 믿어야 한다. */
+    quote: "In order to succeed, we must first believe that we can.",
+    author: "Nikos Kazantzakis",
   },
   {
+    /** 노력 전에 성공이 나오는 곳은 사전뿐이다. */
     quote:
-      "The only thing worse than starting something and falling.. is not starting something",
-    author: "SEth Godin",
+      "The only place where success comes before work is in the dictionary.",
+    author: "Vidal Sassoon",
   },
   {
+    /** 인생은 자전거를 타는 것과 같다. 균형을 잡으려면 움직여야 한다. */
     quote:
-      "If you really want to do something, you will find a way. If you do not, you will find an excuse.",
-    author: "Jim Rohn",
+      "Life is like riding a bicycle. To keep your balance you must keep moving.",
+    author: "Albert Einstein",
+  },
+  {
+    /** 절망적인 상황은 없다. 절망하는 인간이 있을 뿐이다 */
+    quote:
+      "There are no desperate situations, there are only desperate people.",
+    author: "Heinz Guderian",
+  },
+  {
+    /** 계획 없는 목표는 한낱 꿈에 불과하다. */
+    quote: "A goal without a plan is just a wish.",
+    author: "Antoine de Saint-Exupéry",
+  },
+  {
+    /** 승리는 가장 끈기있는 자에게 돌아간다. */
+    quote: "Victory belongs to the most persevering.",
+    author: "Napoléon Bonaparte",
   },
 ];
 
