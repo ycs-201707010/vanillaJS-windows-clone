@@ -23,9 +23,9 @@ function paintToDo(newToDo) {
   btn.addEventListener("click", (event) => {
     const li = event.target.parentElement;
 
-    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
-
     li.remove(); // HTML 태그를 지우는 함수
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDo();
 
     console.log(toDos);
   });
