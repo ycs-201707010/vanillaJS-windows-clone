@@ -3,11 +3,6 @@
 
 2. windows를 베이스로 디자인
 
-3. 바탕화면에 표시할 아이콘은 4개. (내 컴퓨터, nomad-coder 바로가기,
-To-Do list, VSCode icon)
-
-4. 작업 표시줄은 지금 작업표시줄을 참고
-
 5. 아이콘을 클릭했을 때의 background, border 등 효과는 JS에서 toggle 펑션을 사용해
 구현한다.
 
