@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,300&display=swap");
+
+/* add Components */
+@import url("./main-screen.css");
+@import url("./task-bar.css");
+@import url("./to-do-list.css");
+@import url("./messenger.css");
+@import url("./greetingScreen.css");
+@import url("./components.css");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.root {
+  height: 100vh;
+}

@@ -4,46 +4,154 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Momentum APP By LSD^^</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log In</button>
-    </form>
+    <div class="root">
+      <div class="main-screen">
+        <div class="icon">
+          <img src="./img/icons/myPC.png" />
+          <span>My PC</span>
+        </div>
+        <div class="icon">
+          <img src="./img/icons/vsCode.png" />
+          <span>VSCode</span>
+        </div>
+        <div id="to-do-list" class="icon" ondblclick="appExcute(event)">
+          <img src="./img/icons/todolist.png" />
+          <span>To-Do List</span>
+        </div>
+        <div id="special" class="icon" ondblclick="nomadLetsgo()">
+          <img src="./img/icons/nomad-coders.png" />
+          <span>nomad-coder</span>
+        </div>
+        <div id="Messenger" class="icon" ondblclick="appExcute(event)">
+          <img src="./img/icons/folder.png" />
+          <span>Messenger</span>
+        </div>
+        <div class="icon">
+          <img src="./img/icons/LoL.png" />
+          <span>League of Legends</span>
+        </div>
 
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
+        <div class="application to-do-list">
+          <div class="title-bar">
+            <div class="title-bar__column">
+              <img src="./img/icons/todolist.png" class="title-bar-icon" />
+            </div>
+            <div class="title-bar__column">
+              <span>To-Do List</span>
+            </div>
+            <div class="title-bar__column">
+              <span class="to-do-list" onclick="appKill(event)">X</span>
+            </div>
+          </div>
 
-    <form action="" id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
+          <form action="" id="todo-form">
+            <i class="fa-solid fa-circle-question"></i>
+            <div class="tooltip">
+              <span>This is To-Do-List!</span>
+              <span> You can organize today neatly by creating a list. </span>
+            </div>
+            <input
+              type="text"
+              placeholder="Write a To Do and Press Enter"
+              required
+            />
+          </form>
 
-    <ul id="todo-list">
-      <!-- li 태그가 들어갈 예정 -->
-    </ul>
+          <ul id="list"></ul>
 
-    <div id="quote">
-      <span></span>
-      <span></span>
+          <div id="quote">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="application Messenger">
+          <div class="title-bar">
+            <div class="title-bar__column">
+              <img src="./img/icons/folder.png" class="title-bar-icon" />
+            </div>
+            <div class="title-bar__column">
+              <span>Messenger</span>
+            </div>
+            <div class="title-bar__column">
+              <span class="Messenger" onclick="appKill(event)">X</span>
+            </div>
+          </div>
+
+          <div class="icon-in-folder">
+            <div class="icon">
+              <img src="./img/icons/kakaoTalk.png" />
+              <span>KakaoTalk</span>
+            </div>
+            <div class="icon">
+              <img src="./img/icons/discord.png" />
+              <span>Discord</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="application alert"></div>
+      </div>
+      <div class="task-bar">
+        <div class="task-bar-area">
+          <span><img src="./img/taskBar/start.png" /></span>
+
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+            <input type="text" placeholder="Find" />
+            <!-- <div class="find-alert"></div> -->
+          </div>
+          <span><img src="./img/icons/folder-taskbar.png" /></span>
+          <span><img src="./img/icons/vsCode.png" /></span>
+          <span><img src="./img/icons/kakaoTalk.png" /></span>
+          <span class="to-do-list" onclick="appExcute(event)"
+            ><img src="./img/icons/todolist.png"
+          /></span>
+          <span><img src="./img/icons/LoL.png" /></span>
+        </div>
+        <div class="task-bar-area">
+          <div class="weather"></div>
+          <span><i class="fa-brands fa-discord"></i></span>
+          <span><i class="fa-solid fa-battery-three-quarters"></i></span>
+          <span><i class="fa-solid fa-signal"></i></span>
+          <span><i class="fa-solid fa-temperature-quarter"></i></span>
+          <span><i class="fa-solid fa-volume-high"></i></span>
+          <div class="clock">
+            <span class="clock-component"></span>
+            <span class="clock-component"></span>
+          </div>
+          <span><i class="fa-solid fa-message fa-lg more-margin"></i></span>
+          <div class="to-wallpaper"></div>
+        </div>
+      </div>
     </div>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
+    <div id="greeting-screen">
+      <div class="container">
+        <form id="login-form" class="hidden">
+          <input required maxlength="15" type="text" id="user-name" />
+          <label for="user-name">What is your name?</label>
+          <button><i class="fa-solid fa-arrow-right-long"></i></button>
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+      </div>
     </div>
 
-    <script src="js/clock.js"></script>
-    <script src="js/greetings.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+    <!-- DON'T REMOVE THIS CODE -->
+    <script src="./js/weather.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/execute_and_exit.js"></script>
+    <script src="./js/greeting.js"></script>
+    <script src="./js/background.js"></script>
+    <script
+      src="https://kit.fontawesome.com/296f56b5af.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

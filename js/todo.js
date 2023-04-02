@@ -1,6 +1,8 @@
 const toDoForm = document.getElementById("todo-form");
+const toDoInfo = toDoForm.querySelector("i");
+const toDoTooltip = toDoForm.querySelector(".tooltip");
 const toDoInput = toDoForm.querySelector("input");
-const toDoList = document.getElementById("todo-list");
+const toDoList = document.getElementById("list");
 
 const TODOS_KEY = "todos";
 
@@ -16,13 +18,15 @@ function paintToDo(newToDo) {
   li.id = newToDo.id;
 
   const span = document.createElement("span");
-  span.innerText = newToDo.text;
+
+  const label = document.createElement("label");
+  label.innerText = newToDo.text;
+  label.htmlFor = newToDo.text;
 
   const btn = document.createElement("button");
+  //   btn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
   btn.innerText = "❌";
-  btn.addEventListener("click", (event) => {
-    const li = event.target.parentElement;
-
+  btn.addEventListener("click", () => {
     li.remove(); // HTML 태그를 지우는 함수
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDo();
@@ -30,8 +34,15 @@ function paintToDo(newToDo) {
     console.log(toDos);
   });
 
+  const checkBox = document.createElement("input");
+  checkBox.id = label.htmlFor;
+  checkBox.type = "checkbox";
+
+  span.appendChild(label);
+  span.appendChild(checkBox);
+  span.appendChild(btn);
+
   li.appendChild(span);
-  li.appendChild(btn);
 
   toDoList.appendChild(li);
 }
@@ -52,11 +63,25 @@ function handleToDoSubmit(event) {
   saveToDo();
 }
 
-toDoForm.addEventListener("submit", handleToDoSubmit);
+let hoverTime = 0;
+let hoverInterval;
 
-function sayHello(item) {
-  console.log("Hello " + item);
+function showTooltip() {
+  hoverInterval = setTimeout(() => {
+    toDoTooltip.style.opacity = 100;
+    toDoTooltip.style.visibility = "visible";
+  }, 700);
 }
+
+function hideTooltip() {
+  clearTimeout(hoverInterval);
+  toDoTooltip.style.opacity = 0;
+  toDoTooltip.style.visibility = "hidden";
+}
+
+toDoForm.addEventListener("submit", handleToDoSubmit);
+toDoInfo.addEventListener("mouseover", showTooltip);
+toDoInfo.addEventListener("mouseout", hideTooltip);
 
 /** 로컬 스토리지에 저장된 ToDos를 불러와 저장한 변수 */
 const savedToDos = localStorage.getItem(TODOS_KEY);
@@ -64,6 +89,5 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
-  console.log(parsedToDos);
   parsedToDos.forEach(paintToDo);
 }

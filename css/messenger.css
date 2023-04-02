@@ -1,0 +1,14 @@
+div.Messenger {
+  width: 800px;
+  height: 600px;
+}
+
+.Messenger .icon-in-folder {
+  margin-top: 15px;
+  padding: 20px;
+  display: flex;
+}
+
+.icon-in-folder .icon {
+  margin-right: 15px;
+}

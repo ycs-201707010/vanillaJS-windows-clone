@@ -1,0 +1,90 @@
+.task-bar {
+  position: fixed;
+  width: 100vw;
+  height: 5vh;
+  bottom: 0px;
+  background-color: #7e45c4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.task-bar-area {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.task-bar-area span:not(.clock-component) {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task-bar-area div:not(.search-bar):hover,
+.task-bar-area span:not(.clock-component, .weather-component):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.task-bar-area span img {
+  width: 20px;
+  height: 20px;
+  margin: 0px 15px;
+  pointer-events: none;
+}
+
+.task-bar-area span:not(:first-child) img {
+  width: 25px;
+  height: 25px;
+}
+
+.task-bar-area span i {
+  margin: 0px 5px;
+}
+.task-bar-area span i.more-margin {
+  margin: 0px 15px;
+}
+
+.task-bar-area .search-bar {
+  width: 350px;
+  height: 5vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
+}
+
+.search-bar input {
+  width: 80%;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+.task-bar-area div {
+  height: 5vh;
+}
+
+.task-bar-area .clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5px;
+}
+
+.task-bar-area .clock span {
+  height: 50%;
+}
+
+.task-bar-area .weather {
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-bar-area .to-wallpaper {
+  width: 6px;
+  border-left: 1px solid white;
+}

@@ -1,0 +1,48 @@
+.main-screen {
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 10px;
+  color: white;
+}
+
+.main-screen .icon {
+  width: 100px;
+  /* height: 105px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.main-screen .icon:hover {
+  background-color: rgba(185, 238, 255, 0.7);
+  border-color: rgba(90, 149, 245);
+}
+
+.icon * {
+  pointer-events: none;
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.icon span {
+  width: 100px;
+  text-align: center;
+  overflow: hidden; /* span이 차지하는 영역을 감추고 */
+  white-space: nowrap; /* 텍스트가 아랫줄로 내려가는 현상 방지 */
+  text-overflow: ellipsis; /* 생략되는 부분을 ... 으로 만듦 */
+}
+
+.icon:active span,
+.icon:visited span {
+  overflow: visible;
+  white-space: normal;
+  text-overflow: inherit;
+}

@@ -1,10 +1,17 @@
-const images = ["01.jpeg", "02.jpg", "03.jpeg", "04.jpeg"];
+const images = [
+  "01.jpg",
+  "02.jpg",
+  "03.jpg",
+  "04.png",
+  "05.webp",
+  "06.png",
+  "07.png",
+];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-const bgImage = document.createElement("img");
-
-bgImage.src = `img/${chosenImage}`;
+const src = `./img/wallpaper/${chosenImage}`;
 
 /**  */
-document.body.appendChild(bgImage);
+console.log(src);
+document.body.style.backgroundImage = `url(${src})`;
