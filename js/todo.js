@@ -63,7 +63,7 @@ function handleToDoSubmit(event) {
   saveToDo();
 }
 
-let hoverTime = 0;
+// let hoverTime = 0;
 let hoverInterval;
 
 function showTooltip() {
